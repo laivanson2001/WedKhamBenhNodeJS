@@ -40,6 +40,15 @@ let putCURD = async (req, res) => {
         data: allUser,
     })
 }
+
+let deleteCURD = async (req, res) => {
+    let id = req.query.id
+    if (id) {
+        await CRUDService.deleteUserById(id)
+    } else {
+        return res.send('Not found')
+    }
+}
 module.exports = {
     getHomePage,
     getCRUD,
@@ -47,4 +56,5 @@ module.exports = {
     showCRUD,
     editCRUD,
     putCURD,
+    deleteCURD,
 }

@@ -11,6 +11,7 @@ let initWedRoutes = (app) => {
     router.get('/show-crud', homeController.showCRUD)
     router.get('/edit-crud', homeController.editCRUD)
     router.post('/put-crud', homeController.putCURD)
+    router.get('/delete-crud', homeController.deleteCURD)
     return app.use("/", router)
 }
 
