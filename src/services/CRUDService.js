@@ -105,7 +105,6 @@ let deleteUserById = async (id) => {
         }
     })
 }
-
 module.exports = {
     createNewUser,
     getAllUser,
